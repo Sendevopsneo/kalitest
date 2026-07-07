@@ -1,0 +1,21 @@
+name: Github Action Test
+on:
+  push: null
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Welcome
+        run: echo "Say Welcome"
+  Secondjob:
+    needs: firstjob
+    runs-on: windows-latest
+    steps:
+      - name: check ipconfig
+        run: ipconfig
+  Thiredjob:
+    needs: Secondjob
+    runs-on: ubuntu-latest
+    steps:
+      - name: check ifconfig
+        run: ifconfig
