@@ -17,5 +17,5 @@ jobs:
     needs: Secondjob
     runs-on: ubuntu-latest
     steps:
-      - name: check ifconfig
-        run: ifconfig
+      - name: check echo
+        run: echo "Successfully Done"
